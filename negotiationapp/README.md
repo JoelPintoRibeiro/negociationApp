@@ -10,6 +10,11 @@ npm install
 npm run serve
 ```
 
+### Add your own api key in .env file for the weather api service
+```
+VUE_APP_OPEN_WEATHER_API_KEY=YOUR_KEY
+```
+
 ### Compiles and minifies for production
 ```
 npm run build
