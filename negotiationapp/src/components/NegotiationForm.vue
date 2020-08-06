@@ -9,7 +9,7 @@
         <div v-else>
           <form v-on:submit.prevent="submitEmployerAmount">
             <div>
-              <input ref="employerInput" autofocus type="number" v-model="employerAmount" @keypress="numbersUtilMixin($event)" placeholder="Enter maximum offer" />
+              <input ref="employerInput" autofocus type="number" v-model="employerAmount" @keypress="isNumeric($event)" placeholder="Enter maximum offer" />
             </div>
             <b-button class="my-2" @click="submitEmployerAmount" variant="outline-primary">Submit</b-button>
           </form>
@@ -22,7 +22,7 @@
         <div v-else class="submit-content">
           <form v-on:submit.prevent="submitEmployeeAmount">
             <div>
-              <input ref="employeeInput" v-model="employeeAmount" @keypress="numbersUtilMixin($event)" placeholder="Enter minimum salary" />
+              <input ref="employeeInput" v-model="employeeAmount" @keypress="isNumeric($event)" placeholder="Enter minimum salary" />
             </div>
             <b-button class="my-2" @click="submitEmployeeAmount" variant="outline-primary">submit</b-button>
           </form>
